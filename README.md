@@ -3,4 +3,11 @@ Medusa is codename for a National Security and Identification project. The proje
 
 Medusa has the power and ability to connect with local information database and map those information to individual identities and also can track any individual that may be specified for it.
 
+Contributors
+----------
+Clement Onawole - Developer & Architect
+Dapo Bankole - Business Analyst
+Seyi Awoniyi - Network & Protocol Specialist
+Tunde Ojo - Project Manager
+...
 

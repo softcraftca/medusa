@@ -4,7 +4,8 @@ Medusa is codename for a National Security and Identification project. The proje
 Medusa has the power and ability to connect with local information database and map those information to individual identities and also can track any individual that may be specified for it.
 
 High Level Architecture
-![HL Arch](https://github.com/softcraftca/medusa/tree/master/Model/images/HL Arch.jpg)
+
+![HL Arch](https://github.com/softcraftca/medusa/blob/master/Model/images/HL Arch.jpg)
 
 Contributors
 ----------

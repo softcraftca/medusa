@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ca.softcraftng.medusa.domain
+namespace Softcraftng.Medusa.Domain
 {
     public class User
     {

@@ -1,0 +1,11 @@
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\bin\Debug\Microsoft.Extensions.Logging.xml
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\bin\Debug\Medusa.Messaging.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\bin\Debug\Medusa.Messaging.pdb
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\obj\Debug\Medusa.Messaging.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\obj\Debug\Medusa.Messaging.pdb
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Messaging\obj\Debug\Messaging.csprojResolveAssemblyReference.cache

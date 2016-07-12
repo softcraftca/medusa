@@ -7,8 +7,8 @@
     <ProjectGuid>{6A850166-BA90-4478-AADB-84EAEA368069}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ca.softcraftng.medusa.domain</RootNamespace>
-    <AssemblyName>Domain</AssemblyName>
+    <RootNamespace>Softcraftng.Medusa.Domain</RootNamespace>
+    <AssemblyName>Medusa.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

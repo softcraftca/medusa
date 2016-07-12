@@ -1,0 +1,4 @@
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Domain\bin\Debug\Medusa.Domain.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Domain\bin\Debug\Medusa.Domain.pdb
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Domain\obj\Debug\Medusa.Domain.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Domain\obj\Debug\Medusa.Domain.pdb

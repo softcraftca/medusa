@@ -5,7 +5,7 @@ Medusa has the power and ability to connect with local information database and 
 
 High Level Architecture
 
-![HL Arch](https://github.com/softcraftca/medusa/blob/master/Model/images/HL Arch.jpg)
+![HL Arch](https://github.com/softcraftca/medusa/blob/master/Model/Images/HL%20Arch.jpg)
 
 Contributors
 ----------

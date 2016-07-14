@@ -6,11 +6,11 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
-using MedusaWeb.Models;
-using MedusaWeb.Models.ManageViewModels;
-using MedusaWeb.Services;
+using Softcraftng.Medusa.MedusaCore.Models.ManageViewModels;
+using Softcraftng.Medusa.MedusaCore.Models;
+using Softcraftng.Medusa.MedusaCore.Services;
 
-namespace MedusaWeb.Controllers
+namespace Softcraftng.Medusa.MedusaCore.Controllers
 {
     [Authorize]
     public class ManageController : Controller

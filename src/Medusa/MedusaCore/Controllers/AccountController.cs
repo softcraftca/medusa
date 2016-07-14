@@ -8,11 +8,11 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.Extensions.Logging;
-using MedusaWeb.Models;
-using MedusaWeb.Models.AccountViewModels;
-using MedusaWeb.Services;
+using Softcraftng.Medusa.MedusaCore.Models.AccountViewModels;
+using Softcraftng.Medusa.MedusaCore.Models;
+using Softcraftng.Medusa.MedusaCore.Services;
 
-namespace MedusaWeb.Controllers
+namespace Softcraftng.Medusa.MedusaCore.Controllers
 {
     [Authorize]
     public class AccountController : Controller

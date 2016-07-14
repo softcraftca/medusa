@@ -3,6 +3,21 @@
   "version": 2,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
+      "AutoMapper/4.2.1": {
+        "type": "package",
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Core",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net45/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/net45/AutoMapper.dll": {}
+        }
+      },
       "Ix-Async/1.2.5": {
         "type": "package",
         "frameworkAssemblies": [
@@ -1649,6 +1664,43 @@
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
+      "NLog/4.3.5": {
+        "type": "package",
+        "compile": {
+          "lib/net45/NLog.dll": {}
+        },
+        "runtime": {
+          "lib/net45/NLog.dll": {}
+        }
+      },
+      "NLog.Config/4.3.5": {
+        "type": "package",
+        "dependencies": {
+          "NLog": "4.3.5",
+          "NLog.Schema": "4.3.4"
+        }
+      },
+      "NLog.Extensions.Logging/1.0.0-rc2-final-2016-05-21": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting": "1.0.0-rc2-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc2-final",
+          "NLog": "4.3.4"
+        },
+        "frameworkAssemblies": [
+          "System.Xml",
+          "System.Xml.XmlSerializer"
+        ],
+        "compile": {
+          "lib/net451/NLog.Extensions.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/net451/NLog.Extensions.Logging.dll": {}
+        }
+      },
+      "NLog.Schema/4.3.4": {
+        "type": "package"
+      },
       "NuGet.Common/3.5.0-beta-final": {
         "type": "package",
         "frameworkAssemblies": [
@@ -2516,6 +2568,20 @@
     }
   },
   "libraries": {
+    "AutoMapper/4.2.1": {
+      "sha512": "BxAMt0Sl9dQIPPualuMv6IhJ5QrWmWSgyYZ/QxcQcR2IBu57/CXG5IP+73sFIr4FMNtcrUugWnuOWkYnlrLVWQ==",
+      "type": "package",
+      "files": [
+        "AutoMapper.4.2.1.nupkg.sha512",
+        "AutoMapper.nuspec",
+        "lib/dotnet5.1/AutoMapper.dll",
+        "lib/dotnet5.1/AutoMapper.xml",
+        "lib/net45/AutoMapper.dll",
+        "lib/net45/AutoMapper.xml",
+        "lib/portable-net45+win+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10/AutoMapper.dll",
+        "lib/portable-net45+win+wpa81+MonoAndroid10+Xamarin.iOS10+MonoTouch10/AutoMapper.xml"
+      ]
+    },
     "Ix-Async/1.2.5": {
       "sha512": "8EXO8q7cpDUH9G2q+UOPOO/6uZ9aN7mx/4xjFIfkp+qLWVJiYuglkRhjY8Ggs2CucXzHR8GHnovJKB5yQoYaJg==",
       "type": "package",
@@ -3975,6 +4041,59 @@
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.dll",
         "lib/portable-net45+wp80+win8+wpa81+dnxcore50/Newtonsoft.Json.xml",
         "tools/install.ps1"
+      ]
+    },
+    "NLog/4.3.5": {
+      "sha512": "BOHE+y7y21hnb2fzA/GaJWkbgi0nNukXd2HcDMqYPxqmcYQ8CFHQk8U02/4Q1nspQXZRgcJ3IuK6ljPD+Ls2yA==",
+      "type": "package",
+      "files": [
+        "NLog.4.3.5.nupkg.sha512",
+        "NLog.nuspec",
+        "lib/MonoAndroid10/NLog.dll",
+        "lib/MonoAndroid10/NLog.xml",
+        "lib/Xamarin.iOS10/NLog.dll",
+        "lib/Xamarin.iOS10/NLog.xml",
+        "lib/net35/NLog.dll",
+        "lib/net35/NLog.xml",
+        "lib/net40/NLog.dll",
+        "lib/net40/NLog.xml",
+        "lib/net45/NLog.dll",
+        "lib/net45/NLog.xml",
+        "lib/sl4/NLog.dll",
+        "lib/sl4/NLog.xml",
+        "lib/sl5/NLog.dll",
+        "lib/sl5/NLog.xml",
+        "lib/wp8/NLog.dll",
+        "lib/wp8/NLog.xml"
+      ]
+    },
+    "NLog.Config/4.3.5": {
+      "sha512": "ZdVDGDvh/fHDdWiqLAK0UtklHExokf8lAODRY/PuCvUp2y4WpITUeFhhuMNX8z/NmVHcVlwcDdbC1wkuyU+cfg==",
+      "type": "package",
+      "files": [
+        "NLog.Config.4.3.5.nupkg.sha512",
+        "NLog.Config.nuspec",
+        "content/NLog.config",
+        "tools/Install.ps1"
+      ]
+    },
+    "NLog.Extensions.Logging/1.0.0-rc2-final-2016-05-21": {
+      "sha512": "6U83Ws5AKKC0PlLEIYBM9xhPrqmRftHIIfUevwPwi/HVuxaFHskz4ZdQ1LHo5X2DxABpxQDsMw6q+9af7ajG3w==",
+      "type": "package",
+      "files": [
+        "NLog.Extensions.Logging.1.0.0-rc2-final-2016-05-21.nupkg.sha512",
+        "NLog.Extensions.Logging.nuspec",
+        "lib/net451/NLog.Extensions.Logging.dll",
+        "lib/netstandard1.3/NLog.Extensions.Logging.dll"
+      ]
+    },
+    "NLog.Schema/4.3.4": {
+      "sha512": "I8WBBt2dS7Lxtx3eFMzywZi3QBxw/KTQgXwKB5rqdAjMXC2ry/RoRO8oZdGygjRJzvhDqWYFvcm3KrhKkwlbnQ==",
+      "type": "package",
+      "files": [
+        "NLog.Schema.4.3.4.nupkg.sha512",
+        "NLog.Schema.nuspec",
+        "content/NLog.xsd"
       ]
     },
     "NuGet.Common/3.5.0-beta-final": {
@@ -6809,6 +6928,7 @@
   },
   "projectFileDependencyGroups": {
     "": [
+      "AutoMapper >= 4.2.1",
       "Microsoft.ApplicationInsights.AspNetCore >= 1.0.0-rc2-final",
       "Microsoft.AspNetCore.Authentication.Cookies >= 1.0.0-rc2-final",
       "Microsoft.AspNetCore.Diagnostics >= 1.0.0-rc2-final",
@@ -6829,7 +6949,10 @@
       "Microsoft.Extensions.Logging.Debug >= 1.0.0-rc2-final",
       "Microsoft.VisualStudio.Web.BrowserLink.Loader >= 14.0.0-rc2-final",
       "Microsoft.VisualStudio.Web.CodeGeneration.Tools >= 1.0.0-preview1-final",
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc >= 1.0.0-preview1-final"
+      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc >= 1.0.0-preview1-final",
+      "NLog >= 4.3.5",
+      "NLog.Config >= 4.3.5",
+      "NLog.Extensions.Logging >= 1.0.0-rc2-final-2016-05-21"
     ],
     ".NETFramework,Version=v4.6.1": []
   },

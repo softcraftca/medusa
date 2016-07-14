@@ -9,11 +9,21 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
-using MedusaWeb.Data;
-using MedusaWeb.Models;
-using MedusaWeb.Services;
+using NLog.Extensions.Logging;
+using Microsoft.AspNetCore.Mvc.Razor;
+using Microsoft.AspNetCore.Mvc;
+using System.IdentityModel.Claims;
+using Softcraftng.Medusa.MedusaCore.Services;
+using Microsoft.Extensions.Localization;
+using Softcraftng.Medusa.MedusaCore.Localization;
+using Softcraftng.Medusa.MedusaCore.Data;
+using Softcraftng.Medusa.MedusaCore;
+using System.Security.Cryptography.X509Certificates;
+using System.IO;
+using Microsoft.AspNetCore.Http;
+using Softcraftng.Medusa.MedusaCore.Models;
 
-namespace MedusaWeb
+namespace Softcraftng.Medusa.MedusaCore
 {
     public class Startup
     {
@@ -35,9 +45,13 @@ namespace MedusaWeb
 
             builder.AddEnvironmentVariables();
             Configuration = builder.Build();
+
+            Startup.ConfigurationStatic = Configuration;//TODO: refactor; used to pass config to DataContext. There should be a better way
+            MappingConfig.RegisterMaps();
         }
 
         public IConfigurationRoot Configuration { get; }
+        public static IConfigurationRoot ConfigurationStatic { get; set; } //TODO: refactor
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -52,11 +66,37 @@ namespace MedusaWeb
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
-            services.AddMvc();
+            services.AddLocalization(options => options.ResourcesPath = "Resources");
+            services.AddMvc()
+                .AddViewLocalization(LanguageViewLocationExpanderFormat.Suffix)
+                .AddDataAnnotationsLocalization();
+
+            //authorization
+            services.AddAuthorization(configure =>
+            {
+                configure.AddPolicy("admin", policy =>
+                {
+                    policy.RequireClaim(ClaimTypes.Name, new string[] { "dapo.onawole@gmail.com" });
+                });
+            });
+
+
+            //configure MVC
+            services.Configure<MvcOptions>(options =>
+            {
+                options.MaxModelValidationErrors = 50;
+            });
+
+            // Add application services.
+            //services.Configure<AppKeyConfig>(Configuration.GetSection("AppKeys"));// for user secrets
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();
             services.AddTransient<ISmsSender, AuthMessageSender>();
+
+            services.AddSingleton<IRepository, Repository>();
+            services.AddSingleton<ICache, CacheServices>();
+            //services.AddScoped<IStringLocalizerFactory, JsonStringLocalizerFactory>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +104,7 @@ namespace MedusaWeb
         {
             loggerFactory.AddConsole(Configuration.GetSection("Logging"));
             loggerFactory.AddDebug();
+            loggerFactory.AddNLog();
 
             app.UseApplicationInsightsRequestTelemetry();
 
@@ -92,6 +133,31 @@ namespace MedusaWeb
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            env.ConfigureNLog("nlog.config");
+
+            //https
+            //var pfxFile = Path.Combine(appEnv.ApplicationBasePath, "himvc.pfx");
+            //TODO: Change to secret file
+            //X509Certificate2 certificate = new X509Certificate2(pfxFile, "password");
+            //app.Use(ChangeContextToHttps);
+            //app.UseKestrelHttps(certificate);
+
+            //app.UseDeveloperExceptionPage();
+            //app.UseMvcWithDefaultRoute();
+
+            // intitiaize database witht data
+
+            //SeedData.Initialize(app.ApplicationServices);
+        }
+
+        private static RequestDelegate ChangeContextToHttps(RequestDelegate next)
+        {
+            return async context =>
+            {
+                context.Request.Scheme = "https";
+                await next(context);
+            };
         }
     }
 }

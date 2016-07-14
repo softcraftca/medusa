@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETFramework,Version=v4.6.1/",
-    "signature": "ea12dbe0f98e0620d69c8dbab2da8f2f1501aa8a"
+    "signature": "6be811226968ab6e79ee4d7fef847fab9eea5bc7"
   },
   "compilationOptions": {
     "defines": [
@@ -17,6 +17,7 @@
     ".NETFramework,Version=v4.6.1": {
       "MedusaCore/1.0.0": {
         "dependencies": {
+          "AutoMapper": "4.2.1",
           "Microsoft.ApplicationInsights.AspNetCore": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Diagnostics": "1.0.0-rc2-final",
@@ -33,10 +34,24 @@
           "Microsoft.Extensions.Logging": "1.0.0-rc2-final",
           "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final",
           "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final",
+          "NLog": "4.3.5",
+          "NLog.Config": "4.3.5",
+          "NLog.Extensions.Logging": "1.0.0-rc2-final-2016-05-21",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc2-final"
         },
         "compile": {
           "MedusaCore.exe": {}
+        }
+      },
+      "AutoMapper/4.2.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.0.0.0",
+          "System": "4.0.0.0",
+          "System.Core": "4.0.0.0",
+          "mscorlib": "4.0.0.0"
+        },
+        "compile": {
+          "lib/net45/AutoMapper.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -530,18 +545,6 @@
           "lib/net451/Microsoft.AspNetCore.Razor.Runtime.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Razor.Tools/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Razor.Runtime": "1.0.0-rc2-final",
-          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview1-002702",
-          "Microsoft.Extensions.CommandLineUtils": "1.0.0-rc2-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final",
-          "Newtonsoft.Json": "8.0.3"
-        },
-        "compile": {
-          "lib/net451/dotnet-razor-tooling.exe": {}
-        }
-      },
       "Microsoft.AspNetCore.Routing/1.0.0-rc2-final": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Extensions": "1.0.0-rc2-final",
@@ -670,66 +673,14 @@
           "lib/net45/Microsoft.CodeAnalysis.CSharp.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.CSharp.Workspaces/1.3.0-beta1-20160429-01": {
-        "dependencies": {
-          "Microsoft.CodeAnalysis.CSharp": "1.3.0-beta1-20160429-01",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "1.3.0-beta1-20160429-01"
-        },
-        "compile": {
-          "lib/net45/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {}
-        }
-      },
-      "Microsoft.CodeAnalysis.Workspaces.Common/1.3.0-beta1-20160429-01": {
-        "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "1.3.0-beta1-20160429-01",
-          "Microsoft.Composition": "1.0.27"
-        },
-        "compile": {
-          "lib/net45/Microsoft.CodeAnalysis.Workspaces.Desktop.dll": {},
-          "lib/net45/Microsoft.CodeAnalysis.Workspaces.dll": {}
-        }
-      },
-      "Microsoft.Composition/1.0.27": {
-        "compile": {
-          "lib/portable-net45+win8+wp8+wpa81/System.Composition.AttributedModel.dll": {},
-          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Convention.dll": {},
-          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Hosting.dll": {},
-          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Runtime.dll": {},
-          "lib/portable-net45+win8+wp8+wpa81/System.Composition.TypedParts.dll": {}
-        }
-      },
       "Microsoft.CSharp/4.0.0.0": {
         "compile": {
           ".NETFramework/v4.6.1/Microsoft.CSharp.dll": {}
         }
       },
-      "Microsoft.DotNet.Cli.Utils/1.0.0-preview1-002702": {
-        "dependencies": {
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc2-002702",
-          "NuGet.Frameworks": "3.5.0-beta-final",
-          "NuGet.Packaging": "3.5.0-beta-final",
-          "NuGet.ProjectModel": "3.5.0-beta-final",
-          "NuGet.Versioning": "3.5.0-beta-final"
-        },
-        "compile": {
-          "lib/net451/Microsoft.DotNet.Cli.Utils.dll": {}
-        }
-      },
       "Microsoft.DotNet.InternalAbstractions/1.0.0-rc2-002702": {
         "compile": {
           "lib/net451/Microsoft.DotNet.InternalAbstractions.dll": {}
-        }
-      },
-      "Microsoft.DotNet.ProjectModel/1.0.0-rc2-002702": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyModel": "1.0.0-rc2-final",
-          "Newtonsoft.Json": "8.0.3",
-          "NuGet.Packaging": "3.5.0-beta-final",
-          "NuGet.RuntimeModel": "3.5.0-beta-final",
-          "System.Reflection.Metadata": "1.3.0-rc2-24027"
-        },
-        "compile": {
-          "lib/net451/Microsoft.DotNet.ProjectModel.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/1.0.0-rc2-final": {
@@ -756,51 +707,12 @@
           "lib/net451/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational.Design/1.0.0-rc2-final": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "1.0.0-rc2-final"
-        },
-        "compile": {
-          "lib/net451/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
-        }
-      },
       "Microsoft.EntityFrameworkCore.SqlServer/1.0.0-rc2-final": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "1.0.0-rc2-final"
         },
         "compile": {
           "lib/net451/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Tools.Cli": "1.0.0-preview1-final",
-          "Microsoft.EntityFrameworkCore.Tools.Core": "1.0.0-rc2-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final"
-        },
-        "compile": {
-          "lib/net451/Microsoft.EntityFrameworkCore.Tools.dll": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools.Cli/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview1-002702",
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc2-002702",
-          "Microsoft.EntityFrameworkCore.Tools.Core": "1.0.0-rc2-final",
-          "Microsoft.Extensions.CommandLineUtils": "1.0.0-rc2-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final"
-        },
-        "compile": {
-          "lib/net451/Microsoft.EntityFrameworkCore.Tools.Cli.exe": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools.Core/1.0.0-rc2-final": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0-rc2-final",
-          "Microsoft.EntityFrameworkCore.Relational.Design": "1.0.0-rc2-final"
-        },
-        "compile": {
-          "lib/net451/Microsoft.EntityFrameworkCore.Tools.Core.dll": {}
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/1.0.0-rc2-final": {
@@ -822,11 +734,6 @@
         },
         "compile": {
           "lib/net451/Microsoft.Extensions.Caching.Memory.dll": {}
-        }
-      },
-      "Microsoft.Extensions.CommandLineUtils/1.0.0-rc2-final": {
-        "compile": {
-          "lib/net451/Microsoft.Extensions.CommandLineUtils.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/1.0.0-rc2-final": {
@@ -1124,221 +1031,35 @@
           "lib/net451/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.Extensions.CommandLineUtils": "1.0.0-rc2-final",
-          "Microsoft.Extensions.DependencyInjection": "1.0.0-rc2-final",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "1.0.0-preview1-final"
-        },
-        "compile": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview1-002702",
-          "Microsoft.Extensions.CommandLineUtils": "1.0.0-rc2-final",
-          "Microsoft.Extensions.DependencyInjection": "1.0.0-rc2-final",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "1.0.0-preview1-final",
-          "Newtonsoft.Json": "8.0.3"
-        },
-        "compile": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Hosting": "1.0.0-rc2-final",
-          "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",
-          "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
-          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "1.0.0-preview1-final"
-        },
-        "compile": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Razor": "1.0.0-rc2-final",
-          "Microsoft.CodeAnalysis.CSharp": "1.3.0-beta1-20160429-01",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "1.0.0-preview1-final"
-        },
-        "compile": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Tools/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration": "1.0.0-preview1-final"
-        },
-        "compile": {
-          "lib/net451/dotnet-aspnet-codegenerator.exe": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "1.3.0-beta1-20160429-01",
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc2-002702",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final"
-        },
-        "compile": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration": "1.0.0-preview1-final"
-        },
-        "compile": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
-        }
-      },
       "Newtonsoft.Json/8.0.3": {
         "compile": {
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
-      "NuGet.Common/3.5.0-beta-final": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.0.0.0",
-          "System": "4.0.0.0",
-          "System.Core": "4.0.0.0",
-          "System.IO.Compression": "4.0.0.0"
-        },
+      "NLog/4.3.5": {
         "compile": {
-          "lib/net45/NuGet.Common.dll": {}
+          "lib/net45/NLog.dll": {}
         }
       },
-      "NuGet.Configuration/3.5.0-beta-final": {
+      "NLog.Config/4.3.5": {
         "dependencies": {
-          "NuGet.Common": "3.5.0-beta-final",
-          "System.Security": "4.0.0.0",
+          "NLog": "4.3.5",
+          "NLog.Schema": "4.3.4"
+        }
+      },
+      "NLog.Extensions.Logging/1.0.0-rc2-final-2016-05-21": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting": "1.0.0-rc2-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc2-final",
+          "NLog": "4.3.5",
           "System.Xml": "4.0.0.0",
-          "System.Xml.Linq": "4.0.0.0"
+          "System.Xml.XmlSerializer": "4.0.10.0"
         },
         "compile": {
-          "lib/net45/NuGet.Configuration.dll": {}
+          "lib/net451/NLog.Extensions.Logging.dll": {}
         }
       },
-      "NuGet.DependencyResolver.Core/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Frameworks": "3.5.0-beta-final",
-          "NuGet.LibraryModel": "3.5.0-beta-final",
-          "NuGet.Protocol.Core.v3": "3.5.0-beta-final",
-          "NuGet.Repositories": "3.5.0-beta-final",
-          "NuGet.RuntimeModel": "3.5.0-beta-final"
-        },
-        "compile": {
-          "lib/net45/NuGet.DependencyResolver.Core.dll": {}
-        }
-      },
-      "NuGet.Frameworks/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Versioning": "3.5.0-beta-final"
-        },
-        "compile": {
-          "lib/net45/NuGet.Frameworks.dll": {}
-        }
-      },
-      "NuGet.LibraryModel/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Frameworks": "3.5.0-beta-final",
-          "NuGet.Versioning": "3.5.0-beta-final"
-        },
-        "compile": {
-          "lib/net45/NuGet.LibraryModel.dll": {}
-        }
-      },
-      "NuGet.Packaging/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Common": "3.5.0-beta-final",
-          "NuGet.Packaging.Core": "3.5.0-beta-final",
-          "System.IO.Compression": "4.0.0.0",
-          "System.Xml": "4.0.0.0",
-          "System.Xml.Linq": "4.0.0.0"
-        },
-        "compile": {
-          "lib/net45/NuGet.Packaging.dll": {}
-        }
-      },
-      "NuGet.Packaging.Core/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Packaging.Core.Types": "3.5.0-beta-final",
-          "System.IO.Compression": "4.0.0.0",
-          "System.Xml": "4.0.0.0",
-          "System.Xml.Linq": "4.0.0.0"
-        },
-        "compile": {
-          "lib/net45/NuGet.Packaging.Core.dll": {}
-        }
-      },
-      "NuGet.Packaging.Core.Types/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Frameworks": "3.5.0-beta-final"
-        },
-        "compile": {
-          "lib/net45/NuGet.Packaging.Core.Types.dll": {}
-        }
-      },
-      "NuGet.ProjectModel/3.5.0-beta-final": {
-        "dependencies": {
-          "Newtonsoft.Json": "8.0.3",
-          "NuGet.DependencyResolver.Core": "3.5.0-beta-final"
-        },
-        "compile": {
-          "lib/net45/NuGet.ProjectModel.dll": {}
-        }
-      },
-      "NuGet.Protocol.Core.Types/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Common": "3.5.0-beta-final",
-          "NuGet.Configuration": "3.5.0-beta-final",
-          "NuGet.Packaging": "3.5.0-beta-final",
-          "System.Net.Http": "4.0.0.0"
-        },
-        "compile": {
-          "lib/net45/NuGet.Protocol.Core.Types.dll": {}
-        }
-      },
-      "NuGet.Protocol.Core.v3/3.5.0-beta-final": {
-        "dependencies": {
-          "Newtonsoft.Json": "8.0.3",
-          "NuGet.Common": "3.5.0-beta-final",
-          "NuGet.Packaging": "3.5.0-beta-final",
-          "NuGet.Protocol.Core.Types": "3.5.0-beta-final",
-          "System.IdentityModel": "4.0.0.0",
-          "System.Net.Http": "4.0.0.0",
-          "System.Net.Http.WebRequest": "4.0.0.0",
-          "System.ServiceModel": "4.0.0.0"
-        },
-        "compile": {
-          "lib/net45/NuGet.Protocol.Core.v3.dll": {}
-        }
-      },
-      "NuGet.Repositories/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Packaging": "3.5.0-beta-final"
-        },
-        "compile": {
-          "lib/net45/NuGet.Repositories.dll": {}
-        }
-      },
-      "NuGet.RuntimeModel/3.5.0-beta-final": {
-        "dependencies": {
-          "Newtonsoft.Json": "8.0.3",
-          "NuGet.Frameworks": "3.5.0-beta-final",
-          "NuGet.Versioning": "3.5.0-beta-final"
-        },
-        "compile": {
-          "lib/net45/NuGet.RuntimeModel.dll": {}
-        }
-      },
-      "NuGet.Versioning/3.5.0-beta-final": {
-        "compile": {
-          "lib/net45/NuGet.Versioning.dll": {}
-        }
-      },
+      "NLog.Schema/4.3.4": {},
       "Remotion.Linq/2.0.2": {
         "compile": {
           "lib/net45/Remotion.Linq.dll": {}
@@ -1749,6 +1470,11 @@
           ".NETFramework/v4.6.1/System.Transactions.dll": {}
         }
       },
+      "System.Xml.XmlSerializer/4.0.10.0": {
+        "compile": {
+          ".NETFramework/v4.6.1/Facades/System.Xml.XmlSerializer.dll": {}
+        }
+      },
       "System.IO.Compression/4.0.0.0": {
         "compile": {
           ".NETFramework/v4.6.1/System.IO.Compression.dll": {}
@@ -1783,6 +1509,7 @@
     ".NETFramework,Version=v4.6.1/": {
       "MedusaCore/1.0.0": {
         "dependencies": {
+          "AutoMapper": "4.2.1",
           "Microsoft.ApplicationInsights.AspNetCore": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Authentication.Cookies": "1.0.0-rc2-final",
           "Microsoft.AspNetCore.Diagnostics": "1.0.0-rc2-final",
@@ -1799,10 +1526,24 @@
           "Microsoft.Extensions.Logging": "1.0.0-rc2-final",
           "Microsoft.Extensions.Logging.Console": "1.0.0-rc2-final",
           "Microsoft.Extensions.Logging.Debug": "1.0.0-rc2-final",
+          "NLog": "4.3.5",
+          "NLog.Config": "4.3.5",
+          "NLog.Extensions.Logging": "1.0.0-rc2-final-2016-05-21",
           "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc2-final"
         },
         "runtime": {
           "MedusaCore.exe": {}
+        }
+      },
+      "AutoMapper/4.2.1": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.0.0.0",
+          "System": "4.0.0.0",
+          "System.Core": "4.0.0.0",
+          "mscorlib": "4.0.0.0"
+        },
+        "runtime": {
+          "lib/net45/AutoMapper.dll": {}
         }
       },
       "Ix-Async/1.2.5": {
@@ -2296,18 +2037,6 @@
           "lib/net451/Microsoft.AspNetCore.Razor.Runtime.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Razor.Tools/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Razor.Runtime": "1.0.0-rc2-final",
-          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview1-002702",
-          "Microsoft.Extensions.CommandLineUtils": "1.0.0-rc2-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final",
-          "Newtonsoft.Json": "8.0.3"
-        },
-        "runtime": {
-          "lib/net451/dotnet-razor-tooling.exe": {}
-        }
-      },
       "Microsoft.AspNetCore.Routing/1.0.0-rc2-final": {
         "dependencies": {
           "Microsoft.AspNetCore.Http.Extensions": "1.0.0-rc2-final",
@@ -2436,62 +2165,10 @@
           "lib/net45/Microsoft.CodeAnalysis.CSharp.dll": {}
         }
       },
-      "Microsoft.CodeAnalysis.CSharp.Workspaces/1.3.0-beta1-20160429-01": {
-        "dependencies": {
-          "Microsoft.CodeAnalysis.CSharp": "1.3.0-beta1-20160429-01",
-          "Microsoft.CodeAnalysis.Workspaces.Common": "1.3.0-beta1-20160429-01"
-        },
-        "runtime": {
-          "lib/net45/Microsoft.CodeAnalysis.CSharp.Workspaces.dll": {}
-        }
-      },
-      "Microsoft.CodeAnalysis.Workspaces.Common/1.3.0-beta1-20160429-01": {
-        "dependencies": {
-          "Microsoft.CodeAnalysis.Common": "1.3.0-beta1-20160429-01",
-          "Microsoft.Composition": "1.0.27"
-        },
-        "runtime": {
-          "lib/net45/Microsoft.CodeAnalysis.Workspaces.Desktop.dll": {},
-          "lib/net45/Microsoft.CodeAnalysis.Workspaces.dll": {}
-        }
-      },
-      "Microsoft.Composition/1.0.27": {
-        "runtime": {
-          "lib/portable-net45+win8+wp8+wpa81/System.Composition.AttributedModel.dll": {},
-          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Convention.dll": {},
-          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Hosting.dll": {},
-          "lib/portable-net45+win8+wp8+wpa81/System.Composition.Runtime.dll": {},
-          "lib/portable-net45+win8+wp8+wpa81/System.Composition.TypedParts.dll": {}
-        }
-      },
       "Microsoft.CSharp/4.0.0.0": {},
-      "Microsoft.DotNet.Cli.Utils/1.0.0-preview1-002702": {
-        "dependencies": {
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc2-002702",
-          "NuGet.Frameworks": "3.5.0-beta-final",
-          "NuGet.Packaging": "3.5.0-beta-final",
-          "NuGet.ProjectModel": "3.5.0-beta-final",
-          "NuGet.Versioning": "3.5.0-beta-final"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.DotNet.Cli.Utils.dll": {}
-        }
-      },
       "Microsoft.DotNet.InternalAbstractions/1.0.0-rc2-002702": {
         "runtime": {
           "lib/net451/Microsoft.DotNet.InternalAbstractions.dll": {}
-        }
-      },
-      "Microsoft.DotNet.ProjectModel/1.0.0-rc2-002702": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyModel": "1.0.0-rc2-final",
-          "Newtonsoft.Json": "8.0.3",
-          "NuGet.Packaging": "3.5.0-beta-final",
-          "NuGet.RuntimeModel": "3.5.0-beta-final",
-          "System.Reflection.Metadata": "1.3.0-rc2-24027"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.DotNet.ProjectModel.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore/1.0.0-rc2-final": {
@@ -2518,51 +2195,12 @@
           "lib/net451/Microsoft.EntityFrameworkCore.Relational.dll": {}
         }
       },
-      "Microsoft.EntityFrameworkCore.Relational.Design/1.0.0-rc2-final": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "1.0.0-rc2-final"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.EntityFrameworkCore.Relational.Design.dll": {}
-        }
-      },
       "Microsoft.EntityFrameworkCore.SqlServer/1.0.0-rc2-final": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "1.0.0-rc2-final"
         },
         "runtime": {
           "lib/net451/Microsoft.EntityFrameworkCore.SqlServer.dll": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Tools.Cli": "1.0.0-preview1-final",
-          "Microsoft.EntityFrameworkCore.Tools.Core": "1.0.0-rc2-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.EntityFrameworkCore.Tools.dll": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools.Cli/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview1-002702",
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc2-002702",
-          "Microsoft.EntityFrameworkCore.Tools.Core": "1.0.0-rc2-final",
-          "Microsoft.Extensions.CommandLineUtils": "1.0.0-rc2-final",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.EntityFrameworkCore.Tools.Cli.exe": {}
-        }
-      },
-      "Microsoft.EntityFrameworkCore.Tools.Core/1.0.0-rc2-final": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Hosting.Abstractions": "1.0.0-rc2-final",
-          "Microsoft.EntityFrameworkCore.Relational.Design": "1.0.0-rc2-final"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.EntityFrameworkCore.Tools.Core.dll": {}
         }
       },
       "Microsoft.Extensions.Caching.Abstractions/1.0.0-rc2-final": {
@@ -2584,11 +2222,6 @@
         },
         "runtime": {
           "lib/net451/Microsoft.Extensions.Caching.Memory.dll": {}
-        }
-      },
-      "Microsoft.Extensions.CommandLineUtils/1.0.0-rc2-final": {
-        "runtime": {
-          "lib/net451/Microsoft.Extensions.CommandLineUtils.dll": {}
         }
       },
       "Microsoft.Extensions.Configuration/1.0.0-rc2-final": {
@@ -2886,221 +2519,35 @@
           "lib/net451/Microsoft.VisualStudio.Web.BrowserLink.Loader.dll": {}
         }
       },
-      "Microsoft.VisualStudio.Web.CodeGeneration/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.Extensions.CommandLineUtils": "1.0.0-rc2-final",
-          "Microsoft.Extensions.DependencyInjection": "1.0.0-rc2-final",
-          "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore": "1.0.0-preview1-final"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGeneration.dll": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Core/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.DotNet.Cli.Utils": "1.0.0-preview1-002702",
-          "Microsoft.Extensions.CommandLineUtils": "1.0.0-rc2-final",
-          "Microsoft.Extensions.DependencyInjection": "1.0.0-rc2-final",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Templating": "1.0.0-preview1-final",
-          "Newtonsoft.Json": "8.0.3"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Hosting": "1.0.0-rc2-final",
-          "Microsoft.AspNetCore.Server.Kestrel": "1.0.0-rc2-final",
-          "Microsoft.EntityFrameworkCore": "1.0.0-rc2-final",
-          "Microsoft.EntityFrameworkCore.SqlServer": "1.0.0-rc2-final",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Core": "1.0.0-preview1-final"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Templating/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.AspNetCore.Razor": "1.0.0-rc2-final",
-          "Microsoft.CodeAnalysis.CSharp": "1.3.0-beta1-20160429-01",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Utils": "1.0.0-preview1-final"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Tools/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration": "1.0.0-preview1-final"
-        },
-        "runtime": {
-          "lib/net451/dotnet-aspnet-codegenerator.exe": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGeneration.Utils/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.CodeAnalysis.CSharp.Workspaces": "1.3.0-beta1-20160429-01",
-          "Microsoft.DotNet.ProjectModel": "1.0.0-rc2-002702",
-          "Microsoft.Extensions.PlatformAbstractions": "1.0.0-rc2-final"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll": {}
-        }
-      },
-      "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/1.0.0-preview1-final": {
-        "dependencies": {
-          "Microsoft.VisualStudio.Web.CodeGeneration": "1.0.0-preview1-final"
-        },
-        "runtime": {
-          "lib/net451/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll": {}
-        }
-      },
       "Newtonsoft.Json/8.0.3": {
         "runtime": {
           "lib/net45/Newtonsoft.Json.dll": {}
         }
       },
-      "NuGet.Common/3.5.0-beta-final": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.0.0.0",
-          "System": "4.0.0.0",
-          "System.Core": "4.0.0.0",
-          "System.IO.Compression": "4.0.0.0"
-        },
+      "NLog/4.3.5": {
         "runtime": {
-          "lib/net45/NuGet.Common.dll": {}
+          "lib/net45/NLog.dll": {}
         }
       },
-      "NuGet.Configuration/3.5.0-beta-final": {
+      "NLog.Config/4.3.5": {
         "dependencies": {
-          "NuGet.Common": "3.5.0-beta-final",
-          "System.Security": "4.0.0.0",
+          "NLog": "4.3.5",
+          "NLog.Schema": "4.3.4"
+        }
+      },
+      "NLog.Extensions.Logging/1.0.0-rc2-final-2016-05-21": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Hosting": "1.0.0-rc2-final",
+          "Microsoft.Extensions.Logging.Abstractions": "1.0.0-rc2-final",
+          "NLog": "4.3.5",
           "System.Xml": "4.0.0.0",
-          "System.Xml.Linq": "4.0.0.0"
+          "System.Xml.XmlSerializer": "4.0.10.0"
         },
         "runtime": {
-          "lib/net45/NuGet.Configuration.dll": {}
+          "lib/net451/NLog.Extensions.Logging.dll": {}
         }
       },
-      "NuGet.DependencyResolver.Core/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Frameworks": "3.5.0-beta-final",
-          "NuGet.LibraryModel": "3.5.0-beta-final",
-          "NuGet.Protocol.Core.v3": "3.5.0-beta-final",
-          "NuGet.Repositories": "3.5.0-beta-final",
-          "NuGet.RuntimeModel": "3.5.0-beta-final"
-        },
-        "runtime": {
-          "lib/net45/NuGet.DependencyResolver.Core.dll": {}
-        }
-      },
-      "NuGet.Frameworks/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Versioning": "3.5.0-beta-final"
-        },
-        "runtime": {
-          "lib/net45/NuGet.Frameworks.dll": {}
-        }
-      },
-      "NuGet.LibraryModel/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Frameworks": "3.5.0-beta-final",
-          "NuGet.Versioning": "3.5.0-beta-final"
-        },
-        "runtime": {
-          "lib/net45/NuGet.LibraryModel.dll": {}
-        }
-      },
-      "NuGet.Packaging/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Common": "3.5.0-beta-final",
-          "NuGet.Packaging.Core": "3.5.0-beta-final",
-          "System.IO.Compression": "4.0.0.0",
-          "System.Xml": "4.0.0.0",
-          "System.Xml.Linq": "4.0.0.0"
-        },
-        "runtime": {
-          "lib/net45/NuGet.Packaging.dll": {}
-        }
-      },
-      "NuGet.Packaging.Core/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Packaging.Core.Types": "3.5.0-beta-final",
-          "System.IO.Compression": "4.0.0.0",
-          "System.Xml": "4.0.0.0",
-          "System.Xml.Linq": "4.0.0.0"
-        },
-        "runtime": {
-          "lib/net45/NuGet.Packaging.Core.dll": {}
-        }
-      },
-      "NuGet.Packaging.Core.Types/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Frameworks": "3.5.0-beta-final"
-        },
-        "runtime": {
-          "lib/net45/NuGet.Packaging.Core.Types.dll": {}
-        }
-      },
-      "NuGet.ProjectModel/3.5.0-beta-final": {
-        "dependencies": {
-          "Newtonsoft.Json": "8.0.3",
-          "NuGet.DependencyResolver.Core": "3.5.0-beta-final"
-        },
-        "runtime": {
-          "lib/net45/NuGet.ProjectModel.dll": {}
-        }
-      },
-      "NuGet.Protocol.Core.Types/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Common": "3.5.0-beta-final",
-          "NuGet.Configuration": "3.5.0-beta-final",
-          "NuGet.Packaging": "3.5.0-beta-final",
-          "System.Net.Http": "4.0.0.0"
-        },
-        "runtime": {
-          "lib/net45/NuGet.Protocol.Core.Types.dll": {}
-        }
-      },
-      "NuGet.Protocol.Core.v3/3.5.0-beta-final": {
-        "dependencies": {
-          "Newtonsoft.Json": "8.0.3",
-          "NuGet.Common": "3.5.0-beta-final",
-          "NuGet.Packaging": "3.5.0-beta-final",
-          "NuGet.Protocol.Core.Types": "3.5.0-beta-final",
-          "System.IdentityModel": "4.0.0.0",
-          "System.Net.Http": "4.0.0.0",
-          "System.Net.Http.WebRequest": "4.0.0.0",
-          "System.ServiceModel": "4.0.0.0"
-        },
-        "runtime": {
-          "lib/net45/NuGet.Protocol.Core.v3.dll": {}
-        }
-      },
-      "NuGet.Repositories/3.5.0-beta-final": {
-        "dependencies": {
-          "NuGet.Packaging": "3.5.0-beta-final"
-        },
-        "runtime": {
-          "lib/net45/NuGet.Repositories.dll": {}
-        }
-      },
-      "NuGet.RuntimeModel/3.5.0-beta-final": {
-        "dependencies": {
-          "Newtonsoft.Json": "8.0.3",
-          "NuGet.Frameworks": "3.5.0-beta-final",
-          "NuGet.Versioning": "3.5.0-beta-final"
-        },
-        "runtime": {
-          "lib/net45/NuGet.RuntimeModel.dll": {}
-        }
-      },
-      "NuGet.Versioning/3.5.0-beta-final": {
-        "runtime": {
-          "lib/net45/NuGet.Versioning.dll": {}
-        }
-      },
+      "NLog.Schema/4.3.4": {},
       "Remotion.Linq/2.0.2": {
         "runtime": {
           "lib/net45/Remotion.Linq.dll": {}
@@ -3365,6 +2812,7 @@
       "System.ObjectModel/4.0.10.0": {},
       "System.Data/4.0.0.0": {},
       "System.Transactions/4.0.0.0": {},
+      "System.Xml.XmlSerializer/4.0.10.0": {},
       "System.IO.Compression/4.0.0.0": {},
       "System.IdentityModel/4.0.0.0": {},
       "System.Net.Http.WebRequest/4.0.0.0": {},
@@ -3378,6 +2826,11 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/4.2.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BxAMt0Sl9dQIPPualuMv6IhJ5QrWmWSgyYZ/QxcQcR2IBu57/CXG5IP+73sFIr4FMNtcrUugWnuOWkYnlrLVWQ=="
     },
     "Ix-Async/1.2.5": {
       "type": "package",
@@ -3614,11 +3067,6 @@
       "serviceable": true,
       "sha512": "sha512-ydM66tgqnydDcAxyPYqL+ww9yR4dDlBz9HeIpeFocV5MnygDlQwjOFDlD0vWQEKI6dt39802PHpoXa2K/OwVuw=="
     },
-    "Microsoft.AspNetCore.Razor.Tools/1.0.0-preview1-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3lMt3yRoagqL9JYC6ds5sMVNhBXilEz6ype9qB6Qndcabjx7ac0MJDSxKoacinOIzzGviCD1bandE7krA/YhNQ=="
-    },
     "Microsoft.AspNetCore.Routing/1.0.0-rc2-final": {
       "type": "package",
       "serviceable": true,
@@ -3664,40 +3112,15 @@
       "serviceable": true,
       "sha512": "sha512-q0uOK8fa3CNYNKud8OygnYmOvgcBQxQAnS2irP9LbARMGkCB1qNpjhSeiC+eF402O5Xb5voGOXnrIQbdLUv5TA=="
     },
-    "Microsoft.CodeAnalysis.CSharp.Workspaces/1.3.0-beta1-20160429-01": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-nt9+kxJDKB9toK/bw+f+t3Y/XFC4DAgqzh8+aTZLZRZMkeIJh8LE2GyGGRyaBkT8w4T04WrEKG5LcZoxr0LiwA=="
-    },
-    "Microsoft.CodeAnalysis.Workspaces.Common/1.3.0-beta1-20160429-01": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1yCICYedHBDkcjPWOZ2VdOV8qO+N3MouyhJOhZMb9ZzHzvbX5c4dlH8Xia1qZKY099UHo2zlyvNOMuxbpn014g=="
-    },
-    "Microsoft.Composition/1.0.27": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-pwu80Ohe7SBzZ6i69LVdzowp6V+LaVRzd5F7A6QlD42vQkX0oT7KXKWWPlM/S00w1gnMQMRnEdbtOV12z6rXdQ=="
-    },
     "Microsoft.CSharp/4.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""
     },
-    "Microsoft.DotNet.Cli.Utils/1.0.0-preview1-002702": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/0HCuW5md8HOZ/QznFhjKIWqgDLB5cpFFGnhGByxo9exzWtH8+uGvyjtSJq/pGSVJWLtyjj9YXyohCZ20B9+VA=="
-    },
     "Microsoft.DotNet.InternalAbstractions/1.0.0-rc2-002702": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-81Zp6K3oJY5zyoCtf7eguaZ+EnM3zawCtUKszBCLob1KH6Bu44ET2hokkk/6eMhTI2aQhbGrV9SaSjJ2K8DUDg=="
-    },
-    "Microsoft.DotNet.ProjectModel/1.0.0-rc2-002702": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ryslqqMpPRcJma9kJn3V1/GydzUny6i6xfpQ0cqfWmlPdSQ9Hnh6x2l8yVqU+ueCiVffKWn/Or80moLwroXP/A=="
     },
     "Microsoft.EntityFrameworkCore/1.0.0-rc2-final": {
       "type": "package",
@@ -3709,30 +3132,10 @@
       "serviceable": true,
       "sha512": "sha512-G0rIiI8hlcYl+QXOIvtM/0Eox0wlxM30itzOQlsYAxsUe6eN5jNuI5BW9SU4QzOARiWaH9gTYnns2xXgKbV4Hw=="
     },
-    "Microsoft.EntityFrameworkCore.Relational.Design/1.0.0-rc2-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3AcZmXbF7vIQc+l1UQ/6oiP/xTJGEZkyc8CURSXx2JLtUh5AhTnuzy/zqf5s6AgisOpkc0gDdsPiqqk+94cXhQ=="
-    },
     "Microsoft.EntityFrameworkCore.SqlServer/1.0.0-rc2-final": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-5BJ9VrgVbP/OqIuRow8nZkwbtr5CKjCyQGaXsBLZbzL8LZRkY1rb8kWYBusTJeZ2LjnnV0liQeNPRs3C15pIPQ=="
-    },
-    "Microsoft.EntityFrameworkCore.Tools/1.0.0-preview1-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lRQALPgYcf8c6U2xRhgCwbQ1bdcDVe4Xl6a8s1Lo8HDYBn4GVLiKJUbGdJ0hySwX+br1irOoKAG+GdL453Q2mQ=="
-    },
-    "Microsoft.EntityFrameworkCore.Tools.Cli/1.0.0-preview1-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-rB+lVCt2vZ7ASHweT2ltuNMPR2xLA45WL2CGmQtrR+ZUoVB++WJLGIDQxisKRcViDA5huwpZkcXW0R0kPSlE9g=="
-    },
-    "Microsoft.EntityFrameworkCore.Tools.Core/1.0.0-rc2-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-0L30NEnJaFdbc8a+B9nLb2kkMfnz94RFvJ8JWlO1u73wRChEafB7wLozyhCJFZziEEp8IbFYTzF3omR6gDfsmA=="
     },
     "Microsoft.Extensions.Caching.Abstractions/1.0.0-rc2-final": {
       "type": "package",
@@ -3743,11 +3146,6 @@
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-G6KkTMUiChu9RaURYmNbkKc/cIvhj38jfVzoVtoSR0Aw2KzRCtJiW80xrLaNEgzl2Eu6BipCCy9DVNa7cFZhLQ=="
-    },
-    "Microsoft.Extensions.CommandLineUtils/1.0.0-rc2-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-W27sd1qlG76lEs/TD6PUJKcJJ572v/WrMtHq8VrHKOcI7NwkTgOaayt+/Mh6Zr7a+EIAAITPOFjKjUiPDEPn+g=="
     },
     "Microsoft.Extensions.Configuration/1.0.0-rc2-final": {
       "type": "package",
@@ -3899,115 +3297,30 @@
       "serviceable": true,
       "sha512": "sha512-NM/mukki+sxjRIg6yve48iD0/Y+bb89vGpAVvFNt8+jUpoVz5JBm03q5T3t+vKFiZNjJUWmwsP8vYATIpbk10Q=="
     },
-    "Microsoft.VisualStudio.Web.CodeGeneration/1.0.0-preview1-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-0JK7DndRoDLdBp0cwS/zB+tyWIB7xKSzOLtJDQHLPh5GwQhC/CVpl1qZIY8FhxYgFvytxos5/S4ShvlGvZFDjQ=="
-    },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Core/1.0.0-preview1-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-5c0dQjaSX6V9NaRCSYk6VIqiD38zv17GHWOuCtFthbAsFMAguytaKUJgLHTe8FqB3bdXhfI7TopLcrf0YQeaSA=="
-    },
-    "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/1.0.0-preview1-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7get2/LwBw26nJvi5wtDqVMHyh7X9StBPKeBAPs+H7pzEFzlkx3PcVkc3lB9AsAkJjQoWZdOpkjgJS71sPX7Sg=="
-    },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Templating/1.0.0-preview1-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-W+Adnp1TTQjXk2NAnXN0vSbgpsdTtnMeMLXp+0Ii9K83UoUffgBZTgkrVZnAyUuwZdfDdfWxPnCHHcuklUm0uw=="
-    },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Tools/1.0.0-preview1-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+bUPcAa8trQhlbN2ssBQYimeL9zzDidfVU2crqAsVrImh5D/B+OBUahGKYxLsQJb71fRpIHiASZCN2Cmo7XM9A=="
-    },
-    "Microsoft.VisualStudio.Web.CodeGeneration.Utils/1.0.0-preview1-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-NmDc/XVMwyofkIEGnG/DO7vQGlJJAlUQ6r48u8oTk9njFFJcMoOcsv+ckcWjcVBEtOwbmmx39PmgWSOnGi/3Sg=="
-    },
-    "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/1.0.0-preview1-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-/gfxVBPegkpIAwIfiTRVWWbRUORDNeOc5xFE5IQ/aYa/J39DucSRIYHtXez2UK3gVLVnYYkgu16rre6FtDq7tQ=="
-    },
     "Newtonsoft.Json/8.0.3": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-KGsYQdS2zLH+H8x2cZaSI7e+YZ4SFIbyy1YJQYl6GYBWjf5o4H1A68nxyq+WTyVSOJQ4GqS/DiPE+UseUizgMg=="
     },
-    "NuGet.Common/3.5.0-beta-final": {
+    "NLog/4.3.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7eCg4ky9NtTnxY1+2VtDKIYX137QejH8Dsuw6fENU53N6OeoROsrv1MUm0pu4e3TF8VH1eL5G3Vx/G30VdXEDg=="
+      "sha512": "sha512-BOHE+y7y21hnb2fzA/GaJWkbgi0nNukXd2HcDMqYPxqmcYQ8CFHQk8U02/4Q1nspQXZRgcJ3IuK6ljPD+Ls2yA=="
     },
-    "NuGet.Configuration/3.5.0-beta-final": {
+    "NLog.Config/4.3.5": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XNEuz+JnexgJ+awG5laoKpjbQY62eeSWvpWyNAZs9tVm2Y2Qz2P6o5jYkSfteq1USp672e0G41gcD/XM0XR1Qw=="
+      "sha512": "sha512-ZdVDGDvh/fHDdWiqLAK0UtklHExokf8lAODRY/PuCvUp2y4WpITUeFhhuMNX8z/NmVHcVlwcDdbC1wkuyU+cfg=="
     },
-    "NuGet.DependencyResolver.Core/3.5.0-beta-final": {
+    "NLog.Extensions.Logging/1.0.0-rc2-final-2016-05-21": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-0K284c0Q9u7ibCLE+NUqNe4p0BkSCVyMzWNYYxGY7ehujGUnEC+yGohFpyAu0RPt5bVBCzsbWNe+hXeDoQsjSg=="
+      "sha512": "sha512-6U83Ws5AKKC0PlLEIYBM9xhPrqmRftHIIfUevwPwi/HVuxaFHskz4ZdQ1LHo5X2DxABpxQDsMw6q+9af7ajG3w=="
     },
-    "NuGet.Frameworks/3.5.0-beta-final": {
+    "NLog.Schema/4.3.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Si7O1OFxUryBq3xuq2AIwADM8WUMIBQOmUdTJBSaxV+KesShLJfgrr7Dl+Tg/nVETSEArJS8ktscv7gjKqtosg=="
-    },
-    "NuGet.LibraryModel/3.5.0-beta-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Q/lVn/2Vg2wDiFMD8BwvzmPGw0gEusTt+cqIZ8KNICqUPJ94ICBOZRuEebKmTD/+azrqudDr/ZkI8q7hqLVhaQ=="
-    },
-    "NuGet.Packaging/3.5.0-beta-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-wJSrtokTPmpIkNhJLiG5GPxdRFCVl6XB3MmgLCyRhD2O2wZVQqvvL6SELOz/61EU0C8m9ni/UiiNRqTEtH5QZw=="
-    },
-    "NuGet.Packaging.Core/3.5.0-beta-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-sdc8dUnbjEpNzIK5h5frJgn7ARQjQLdXMC5YrMHoEh0sCJnd2p1Lu4JvHK7mqn/MurVCAvoAjNDyazzFaVCD0w=="
-    },
-    "NuGet.Packaging.Core.Types/3.5.0-beta-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-35AVdtLFJFp66CI9EDS61iviOe4UsCwfGh7RILK3j2ihZtlbTIIS5ygjmS8GnTkhNpmdwQRIk/rUempv4ABBxQ=="
-    },
-    "NuGet.ProjectModel/3.5.0-beta-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-ddWYHyNLP2InZMui7UduGNFATnXdVe4vjE0NdDGNGKF+zXgeRna5hYWvFfmL/UZN7yr6uvN3Kq4A1+/qjoSn3w=="
-    },
-    "NuGet.Protocol.Core.Types/3.5.0-beta-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-1r6K1IVpCu8Lti319FSzRyCmjfwLCoWAwdqdAWOAO3JK7ivyToSi3Gk1N3bHl6jiqiXkKGHZIQv5WR7QPj/fqw=="
-    },
-    "NuGet.Protocol.Core.v3/3.5.0-beta-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-avrqOi+8sDERlbXhSURd5DPtEQoGUcThuVH784i0AxIeYPtZBV66Eq9P8dcoDR7S+cXd4Zeppc+FoMfh1Jw8Dg=="
-    },
-    "NuGet.Repositories/3.5.0-beta-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+w022gOL3QFrNnx0dXMBOmV11q2kGLYV/sFY5bdIaK778ELzAKRCdBsFfxs0YNPLKRGtq2Gn4FNOmyviKuNe4g=="
-    },
-    "NuGet.RuntimeModel/3.5.0-beta-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-5opNw7zHG5wC0Qx9AzlopdPg48Tf/QVcVVKmPRuwUa3VBA1b9DBjY+1jCkaof8JRzyHZqLnxd6T9BuT98Jk0YQ=="
-    },
-    "NuGet.Versioning/3.5.0-beta-final": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-fwFF9Mck1hgZVDvvJLU81gcaidMksfRoCwyjBALEXxnp1fJr4xLyGbTRdbf2OKI5OODGuUpxaMkcz7P4T8HsXw=="
+      "sha512": "sha512-I8WBBt2dS7Lxtx3eFMzywZi3QBxw/KTQgXwKB5rqdAjMXC2ry/RoRO8oZdGygjRJzvhDqWYFvcm3KrhKkwlbnQ=="
     },
     "Remotion.Linq/2.0.2": {
       "type": "package",
@@ -4355,6 +3668,11 @@
       "sha512": ""
     },
     "System.Transactions/4.0.0.0": {
+      "type": "referenceassembly",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Xml.XmlSerializer/4.0.10.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

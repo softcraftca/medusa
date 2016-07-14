@@ -4,9 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using MedusaWeb.Models;
+using Softcraftng.Medusa.MedusaCore.Models;
 
-namespace MedusaWeb.Data
+
+namespace Softcraftng.Medusa.MedusaCore.Data
 {
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {

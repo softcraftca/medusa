@@ -43,6 +43,14 @@
     <Compile Include="Enumerations.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="DataMapper\Facebook.json" />
+    <None Include="DataMapper\GooglePlus.json" />
+    <None Include="DataMapper\Instagram.json" />
+    <None Include="DataMapper\LinkedIn.json" />
+    <None Include="DataMapper\Source1.json" />
+    <None Include="DataMapper\Twitter.json" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

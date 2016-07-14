@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MedusaWeb.Models.ManageViewModels
+namespace Softcraftng.Medusa.MedusaCore.Models.ManageViewModels
 {
     public class AddPhoneNumberViewModel
     {

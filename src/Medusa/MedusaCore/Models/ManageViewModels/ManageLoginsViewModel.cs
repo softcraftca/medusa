@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http.Authentication;
 using Microsoft.AspNetCore.Identity;
 
-namespace MedusaWeb.Models.ManageViewModels
+namespace Softcraftng.Medusa.MedusaCore.Models.ManageViewModels
 {
     public class ManageLoginsViewModel
     {

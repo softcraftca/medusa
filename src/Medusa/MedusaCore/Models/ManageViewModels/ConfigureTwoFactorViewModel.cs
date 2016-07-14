@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
-namespace MedusaWeb.Models.ManageViewModels
+namespace Softcraftng.Medusa.MedusaCore.Models.ManageViewModels
 {
     public class ConfigureTwoFactorViewModel
     {

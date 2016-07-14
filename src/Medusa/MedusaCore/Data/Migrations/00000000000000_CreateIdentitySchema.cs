@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace MedusaWeb.Data.Migrations
+namespace Softcraftng.Medusa.MedusaCore.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MedusaWeb</title>
+    <title>@ViewData["Title"] - Medusa</title>
 
     <environment names="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
@@ -27,11 +27,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a asp-controller="Home" asp-action="Index" class="navbar-brand">::. MedusaWeb</a>
+                <a asp-controller="Home" asp-action="Index" class="navbar-brand">::. Medusa</a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li><a asp-controller="Home" asp-action="Index">Home</a></li>*@
+                    <li><a asp-controller="Medusa" asp-action="Search">Search</a></li>
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             Help
@@ -42,7 +43,7 @@
                             <li><a asp-controller="Home" asp-action="Contact">Contact</a></li>
                         </ul>
                     </li>
-                    
+
                 </ul>
                 @await Html.PartialAsync("_LoginPartial")
             </div>
@@ -52,7 +53,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; 2016 - MedusaWeb</p>
+            <p>&copy; 2016 - Medusa</p>
         </footer>
     </div>
 

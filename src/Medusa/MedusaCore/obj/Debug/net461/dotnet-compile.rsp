@@ -14,6 +14,7 @@
 --version:1.0.0.0
 --informational-version:1.0.0
 --target-framework:.NETFramework,Version=v4.6.1
+--reference:C:\Users\Murpheux\.nuget\packages\AutoMapper\4.2.1\lib\net45\AutoMapper.dll
 --reference:C:\Users\Murpheux\.nuget\packages\Ix-Async\1.2.5\lib\net45\System.Interactive.Async.dll
 --reference:C:\Users\Murpheux\.nuget\packages\Microsoft.ApplicationInsights\2.1.0-beta4\lib\net46\Microsoft.ApplicationInsights.dll
 --reference:C:\Users\Murpheux\.nuget\packages\Microsoft.ApplicationInsights.Agent.Intercept\1.2.1\lib\net45\Microsoft.AI.Agent.Intercept.dll
@@ -127,6 +128,8 @@
 --reference:C:\Users\Murpheux\.nuget\packages\Microsoft.VisualStudio.Web.CodeGeneration.Utils\1.0.0-preview1-final\lib\net451\Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
 --reference:C:\Users\Murpheux\.nuget\packages\Microsoft.VisualStudio.Web.CodeGenerators.Mvc\1.0.0-preview1-final\lib\net451\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 --reference:C:\Users\Murpheux\.nuget\packages\Newtonsoft.Json\8.0.3\lib\net45\Newtonsoft.Json.dll
+--reference:C:\Users\Murpheux\.nuget\packages\NLog\4.3.5\lib\net45\NLog.dll
+--reference:C:\Users\Murpheux\.nuget\packages\NLog.Extensions.Logging\1.0.0-rc2-final-2016-05-21\lib\net451\NLog.Extensions.Logging.dll
 --reference:C:\Users\Murpheux\.nuget\packages\NuGet.Common\3.5.0-beta-final\lib\net45\NuGet.Common.dll
 --reference:C:\Users\Murpheux\.nuget\packages\NuGet.Configuration\3.5.0-beta-final\lib\net45\NuGet.Configuration.dll
 --reference:C:\Users\Murpheux\.nuget\packages\NuGet.DependencyResolver.Core\3.5.0-beta-final\lib\net45\NuGet.DependencyResolver.Core.dll
@@ -201,6 +204,7 @@
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.ObjectModel.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Data.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Transactions.dll
+--reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\Facades\System.Xml.XmlSerializer.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.IO.Compression.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.IdentityModel.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Net.Http.WebRequest.dll
@@ -208,15 +212,22 @@
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Numerics.dll
 --reference:C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.1\System.Runtime.Serialization.dll
 --resource:"C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\obj\Debug\net461\MedusaCoredotnet-compile.deps.json",MedusaCore.deps.json
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\AppKeyConfig.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\MapperConfig.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Program.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Startup.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Controllers\AccountController.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Controllers\HomeController.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Controllers\ManageController.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Controllers\MedusaController.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Data\ApplicationDbContext.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Data\IRepository.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Data\Repository.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Data\Migrations\00000000000000_CreateIdentitySchema.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Data\Migrations\00000000000000_CreateIdentitySchema.Designer.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Data\Migrations\ApplicationDbContextModelSnapshot.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Localization\JsonStringLocalizer.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Localization\JsonStringLocalizerFactory.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\ApplicationUser.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\AccountViewModels\ForgotPasswordViewModel.cs
@@ -234,6 +245,8 @@ C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Medusa
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\ManageViewModels\RemoveLoginViewModel.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\ManageViewModels\SetPasswordViewModel.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\ManageViewModels\VerifyPhoneNumberViewModel.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Services\CacheServices.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Services\ICache.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Services\IEmailSender.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Services\ISmsSender.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Services\MessageServices.cs

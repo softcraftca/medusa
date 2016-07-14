@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Hosting;
 
-namespace MedusaWeb
+namespace Softcraftng.Medusa.MedusaCore
 {
     public class Program
     {
@@ -16,6 +16,7 @@ namespace MedusaWeb
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
                 .UseStartup<Startup>()
+                .UseUrls("http://0.0.0.0:5000")
                 .Build();
 
             host.Run();

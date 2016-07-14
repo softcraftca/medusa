@@ -1,0 +1,14 @@
+﻿{
+  "Firstname": "Firstname",
+  "Middlename": "Middlename",
+  "Surname": "Lastname",
+  "DateofBirth": "DateofBirth",
+  "Age": "Age",
+  "Email": "Email",
+  "Sex": "Sex",
+  "Location": "",
+  "Address": "Address",
+  "Languages" : "Languages",
+  "About" : "About"
+
+}

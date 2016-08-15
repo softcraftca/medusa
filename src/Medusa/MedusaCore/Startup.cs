@@ -22,6 +22,7 @@ using System.Security.Cryptography.X509Certificates;
 using System.IO;
 using Microsoft.AspNetCore.Http;
 using Softcraftng.Medusa.MedusaCore.Models;
+using Softcraftng.Medusa.MedusaCore.Medusa;
 
 namespace Softcraftng.Medusa.MedusaCore
 {
@@ -96,6 +97,7 @@ namespace Softcraftng.Medusa.MedusaCore
 
             services.AddSingleton<IRepository, Repository>();
             services.AddSingleton<ICache, CacheServices>();
+            services.AddScoped<IMedusa, Medusa.Medusa>();
             //services.AddScoped<IStringLocalizerFactory, JsonStringLocalizerFactory>();
         }
 
@@ -108,16 +110,16 @@ namespace Softcraftng.Medusa.MedusaCore
 
             app.UseApplicationInsightsRequestTelemetry();
 
-            if (env.IsDevelopment())
-            {
+            //if (env.IsDevelopment())
+            //{
                 app.UseDeveloperExceptionPage();
                 app.UseDatabaseErrorPage();
                 app.UseBrowserLink();
-            }
-            else
-            {
-                app.UseExceptionHandler("/Home/Error");
-            }
+            //}
+            //else
+            //{
+            //    app.UseExceptionHandler("/Home/Error");
+            //}
 
             app.UseApplicationInsightsExceptionTelemetry();
 

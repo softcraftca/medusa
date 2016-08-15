@@ -1,4 +1,5 @@
-﻿{
+{
+  "copyright": "SoftCraft 2016",
   "userSecretsId": "aspnet-Medusa-881b512e-e8da-458b-979a-1e190a82b600",
 
   "dependencies": {
@@ -38,7 +39,8 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview1-final",
       "type": "build"
-    }
+    },
+    "Paket": "3.9.1"
   },
 
   "tools": {

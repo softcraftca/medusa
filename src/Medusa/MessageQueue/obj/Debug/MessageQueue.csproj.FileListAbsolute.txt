@@ -1,0 +1,7 @@
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MessageQueue\obj\Debug\MessageQueue.csprojResolveAssemblyReference.cache
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MessageQueue\bin\Debug\Medusa.MessageQueue.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MessageQueue\bin\Debug\Medusa.MessageQueue.pdb
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MessageQueue\bin\Debug\RabbitMQ.Client.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MessageQueue\bin\Debug\RabbitMQ.Client.xml
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MessageQueue\obj\Debug\Medusa.MessageQueue.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MessageQueue\obj\Debug\Medusa.MessageQueue.pdb

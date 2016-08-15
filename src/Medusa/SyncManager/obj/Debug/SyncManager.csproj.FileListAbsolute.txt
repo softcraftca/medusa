@@ -1,0 +1,4 @@
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\SyncManager\bin\Debug\Medusa.SyncManager.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\SyncManager\bin\Debug\Medusa.SyncManager.pdb
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\SyncManager\obj\Debug\Medusa.SyncManager.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\SyncManager\obj\Debug\Medusa.SyncManager.pdb

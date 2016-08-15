@@ -1,0 +1,23 @@
+.baseColor {
+  color: #663333;
+}
+.bgLight {
+  color: #884a44;
+}
+.bgLight2 {
+  color: #aa6355;
+}
+.bgDark {
+  color: #442225;
+}
+.bgDark2 {
+  color: #221114;
+}
+#somedum {
+  width: 240px;
+  height: 240px;
+}
+#somemoredum {
+  width: 120px;
+  height: 120px;
+}

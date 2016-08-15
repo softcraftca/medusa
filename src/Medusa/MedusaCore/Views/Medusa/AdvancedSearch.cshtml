@@ -1,0 +1,75 @@
+﻿@model IEnumerable<PersonViewModel>
+
+@{
+    ViewData["Title"] = "Advanced Search";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="row">
+    <div class="col-md-8">
+        <section>
+            
+            <form asp-controller="Medusa" asp-action="Search" method="post" class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-2 control-label">Search</label>
+                    <div class="col-md-8">
+                        <input name="searchString" class="form-control" />
+                    </div>
+                    @*<input type="submit" value="Search" class="col-md-2 btn btn-success" />*@
+                    <button class="btn btn-lg btn-success col-md-2" type="submit">
+                        <span class="glyphicon glyphicon-search pull-left"></span> Search
+                    </button>
+                </div>
+
+            </form>
+        </section>
+    </div>
+</div>
+<div>Search String: @ViewBag.Search</div>
+@*<table class="table">
+    <tr>
+        <th>
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NickName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sex)
+        </th>
+    </tr>
+    @{
+        int x = 0;
+    }
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @{x++; }
+                @x
+            </td>
+            <td>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                @Html.ActionLink(item.FullName, "ViewProfile", new { id = item.Id })
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NickName)
+            </td>
+            <td>
+                <a href="mailto:@item.Email">@item.Email</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                <a asp-action="ViewProfile" asp-route-id="@item.Id">Details</a>
+            </td>
+        </tr>
+                    }
+</table>*@

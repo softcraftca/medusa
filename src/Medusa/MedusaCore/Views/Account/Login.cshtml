@@ -5,12 +5,14 @@
 @inject SignInManager<ApplicationUser> SignInManager
 
 @{
-    ViewData["Title"] = "Log in";
+    Layout = "~/Views/Shared/_LoginLayout.cshtml";
+    //ViewData["Title"] = "Log in";
 }
 
 <h2>@ViewData["Title"].</h2>
+<div class="top-small-buffer"></div>
 <div class="row">
-    <div class="col-md-8">
+    <div class="col-md-4 col-md-offset-4 login-bg">
         <section>
             <form asp-controller="Account" asp-action="Login" asp-route-returnurl="@ViewData["ReturnUrl"]" method="post" class="form-horizontal">
                 <h4>Use a local account to log in.</h4>
@@ -42,7 +44,7 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-offset-2 col-md-10">
-                        <button type="submit" class="btn btn-default">Log in</button>
+                        <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-flash pull-left"></span>Log in</button>
                     </div>
                 </div>
                 <p>
@@ -54,7 +56,7 @@
             </form>
         </section>
     </div>
-    <div class="col-md-4">
+    @*<div class="col-md-4">
         <section>
             <h4>Use another service to log in.</h4>
             <hr />
@@ -84,7 +86,10 @@
                 }
             }
         </section>
-    </div>
+    </div>*@
+</div>
+<div class="row top-buffer">
+    <div><h1 class="text-center" >Medusa Security System</h1></div>
 </div>
 
 @section Scripts {

@@ -1,0 +1,4 @@
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\DeviceManager\bin\Debug\Medusa.DeviceManager.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\DeviceManager\bin\Debug\Medusa.DeviceManager.pdb
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\DeviceManager\obj\Debug\Medusa.DeviceManager.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\DeviceManager\obj\Debug\Medusa.DeviceManager.pdb

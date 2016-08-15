@@ -1,0 +1,12 @@
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\bin\Debug\Medusa.Caching.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\bin\Debug\Medusa.Caching.pdb
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\bin\Debug\ServiceStack.Common.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\bin\Debug\ServiceStack.Redis.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\bin\Debug\ServiceStack.Text.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\bin\Debug\ServiceStack.Common.xml
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\bin\Debug\ServiceStack.Redis.xml
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\bin\Debug\ServiceStack.Text.xml
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\obj\Debug\Caching.csprojResolveAssemblyReference.cache
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\obj\Debug\Medusa.Caching.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Caching\obj\Debug\Medusa.Caching.pdb

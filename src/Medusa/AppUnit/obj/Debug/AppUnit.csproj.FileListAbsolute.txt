@@ -28,3 +28,16 @@ C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUni
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\Medusa.Messaging.pdb
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\obj\Debug\Medusa.UnitTest.dll
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\obj\Debug\Medusa.UnitTest.pdb
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\Medusa.Caching.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\Medusa.MessageQueue.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\RabbitMQ.Client.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\ServiceStack.Common.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\ServiceStack.Interfaces.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\ServiceStack.Redis.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\ServiceStack.Text.dll
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\Medusa.Caching.pdb
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\Medusa.MessageQueue.pdb
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\RabbitMQ.Client.xml
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\ServiceStack.Common.xml
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\ServiceStack.Redis.xml
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\AppUnit\bin\Debug\ServiceStack.Text.xml

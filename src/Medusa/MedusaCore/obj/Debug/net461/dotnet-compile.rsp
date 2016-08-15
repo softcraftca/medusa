@@ -10,6 +10,7 @@
 --optimize:False
 --emit-entry-point:True
 --output-name:MedusaCore
+--copyright:SoftCraft 2016
 --file-version:1.0.0.0
 --version:1.0.0.0
 --informational-version:1.0.0
@@ -228,6 +229,10 @@ C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Medusa
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Data\Migrations\ApplicationDbContextModelSnapshot.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Localization\JsonStringLocalizer.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Localization\JsonStringLocalizerFactory.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Medusa\IMedusa.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Medusa\Medusa.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Medusa\TDomain\IEntity.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Medusa\TDomain\Person.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\ApplicationUser.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\AccountViewModels\ExternalLoginConfirmationViewModel.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\AccountViewModels\ForgotPasswordViewModel.cs
@@ -245,8 +250,11 @@ C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\Medusa
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\ManageViewModels\RemoveLoginViewModel.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\ManageViewModels\SetPasswordViewModel.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\ManageViewModels\VerifyPhoneNumberViewModel.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\MedusaViewModels\PersonViewModel.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Models\MedusaViewModels\SearchViewModel.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Services\CacheServices.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Services\ICache.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Services\IEmailSender.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Services\ISmsSender.cs
 C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\Services\MessageServices.cs
+C:\Users\Murpheux\Documents\Visual Studio 2015\Projects\medusa\src\Medusa\MedusaCore\UIComponent\ViewComponents\WantedListViewComponent.cs

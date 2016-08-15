@@ -1,0 +1,14 @@
+﻿@model IEnumerable<PersonViewModel>
+
+@*
+    For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h3>Wanted List</h3>
+<ul style="padding-left:0;list-style-type:none;">
+    @foreach (var person in Model)
+    {
+        <li>@person.FullName - @person.Sex (@person.Email)</li>
+    }
+</ul>

@@ -1,11 +1,15 @@
-/// <binding BeforeBuild='min' Clean='clean' />
+/// <binding BeforeBuild='less, min' Clean='clean' />
 "use strict";
 
 var gulp = require("gulp"),
     rimraf = require("rimraf"),
     concat = require("gulp-concat"),
     cssmin = require("gulp-cssmin"),
-    uglify = require("gulp-uglify");
+    uglify = require("gulp-uglify"),
+    less = require("gulp-less"),
+    //fileExists = require('file-exists'),
+    //print = require('gulp-print'),
+    less = require("gulp-less");
 
 var webroot = "./wwwroot/";
 
@@ -18,6 +22,8 @@ var paths = {
     concatCssDest: webroot + "css/site.min.css"
 };
 
+var styleFile = webroot + 'css/style.css';
+
 gulp.task("clean:js", function (cb) {
     rimraf(paths.concatJsDest, cb);
 });
@@ -26,7 +32,11 @@ gulp.task("clean:css", function (cb) {
     rimraf(paths.concatCssDest, cb);
 });
 
-gulp.task("clean", ["clean:js", "clean:css"]);
+gulp.task("clean:file", function (cb) {
+    rimraf(styleFile, cb);
+});
+
+gulp.task("clean", ["clean:js", "clean:css", "clean:file"]);
 
 gulp.task("min:js", function () {
     return gulp.src([paths.js, "!" + paths.minJs], { base: "." })
@@ -43,3 +53,12 @@ gulp.task("min:css", function () {
 });
 
 gulp.task("min", ["min:js", "min:css"]);
+
+gulp.task("less:ls", function () {
+    return gulp.src('Styles/style.less')
+      //.pipe(print())
+      .pipe(less())
+      .pipe(gulp.dest(webroot + '/css'));
+});
+
+gulp.task("less", ["less:ls"]);
